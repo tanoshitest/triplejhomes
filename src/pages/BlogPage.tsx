@@ -8,7 +8,6 @@ const BlogPage = () => {
     <div className="min-h-screen">
       <Header />
       <main>
-        <PageBanner />
         <Blog />
       </main>
       <Footer />

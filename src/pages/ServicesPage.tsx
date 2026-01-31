@@ -8,7 +8,6 @@ const ServicesPage = () => {
     <div className="min-h-screen">
       <Header />
       <main>
-        <PageBanner />
         <Services />
       </main>
       <Footer />

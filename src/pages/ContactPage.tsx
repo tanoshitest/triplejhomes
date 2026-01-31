@@ -8,7 +8,6 @@ const ContactPage = () => {
     <div className="min-h-screen">
       <Header />
       <main>
-        <PageBanner />
         <Contact />
       </main>
       <Footer />

@@ -26,28 +26,44 @@
 
 <body>
   <div id="debug-error-display"
-    style="position:fixed; top:0; left:0; width:100%; height:100%; background:white; color:black; z-index:9999; padding:20px; white-space:pre-wrap; font-family:monospace; overflow:auto;">
-    <h1>Debug Mode Active</h1>
-    <p>If you see this, HTML is loading.</p>
-    <div id="status-log">Initializing...</div>
+    style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(255,255,255,0.95); color:black; z-index:9999; padding:20px; white-space:pre-wrap; font-family:monospace; overflow:auto; pointer-events:none;">
+    <h1 style="color:red">Debug Overlay</h1>
+    <div id="status-log" style="border-top:1px solid #ccc; padding-top:10px;"></div>
   </div>
   <script>
     var logDiv = document.getElementById('status-log');
-    function log(msg) { logDiv.innerHTML += '<div>' + msg + '</div>'; }
+    function logToScreen(msg, type) {
+      var color = type === 'error' ? 'red' : (type === 'warn' ? 'orange' : 'black');
+      logDiv.innerHTML += '<div style="color:' + color + '; margin-bottom:4px;">[' + type.toUpperCase() + '] ' + msg + '</div>';
+    }
 
-    log('Inline script running.');
+    // Capture Console Logs
+    var originalLog = console.log;
+    var originalWarn = console.warn;
+    var originalError = console.error;
 
+    console.log = function () { logToScreen(Array.from(arguments).join(' '), 'log'); originalLog.apply(console, arguments); };
+    console.warn = function () { logToScreen(Array.from(arguments).join(' '), 'warn'); originalWarn.apply(console, arguments); };
+    console.error = function () { logToScreen(Array.from(arguments).join(' '), 'error'); originalError.apply(console, arguments); };
+
+    logToScreen('Debug script initialized.', 'info');
+
+    // Capture Global Errors
     window.onerror = function (msg, url, line, col, error) {
-      var div = document.getElementById('debug-error-display');
-      div.style.color = 'red';
-      div.innerHTML += '<h3>Global Error:</h3>' + msg + '<br>URL: ' + url + '<br>Line: ' + line;
+      logToScreen('Global Error: ' + msg + ' (' + url + ':' + line + ')', 'error');
     };
 
+    // Capture Unhandled Rejections
     window.addEventListener('unhandledrejection', function (event) {
-      var div = document.getElementById('debug-error-display');
-      div.style.color = 'red';
-      div.innerHTML += '<h3>Unhandled Rejection:</h3>' + event.reason;
+      logToScreen('Unhandled Rejection: ' + event.reason, 'error');
     });
+
+    // Capture Resource Loading Errors (404s)
+    window.addEventListener('error', function (e) {
+      if (e.target && (e.target.tagName === 'SCRIPT' || e.target.tagName === 'LINK' || e.target.tagName === 'IMG')) {
+        logToScreen('Resource Failed to Load: ' + (e.target.src || e.target.href), 'error');
+      }
+    }, true);
   </script>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>

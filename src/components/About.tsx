@@ -24,7 +24,7 @@ const features = [
   },
 ];
 
-export default function About({ showButton = true }: { showButton?: boolean }) {
+export default function About({ showButton = true, showSubheading = true }: { showButton?: boolean; showSubheading?: boolean }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -66,9 +66,11 @@ export default function About({ showButton = true }: { showButton?: boolean }) {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
-              About Triple J Home
-            </span>
+            {showSubheading && (
+              <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+                About Triple J Home
+              </span>
+            )}
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-6">
               Crafting Quality Homes for Australian Families
             </h2>

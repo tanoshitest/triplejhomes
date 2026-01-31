@@ -1,16 +1,38 @@
+import { useState, useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, MapPin, Calendar, Clock } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 import { projects } from '@/data/siteData';
 
 const ProjectDetailPage = () => {
   const { projectId } = useParams<{ projectId: string }>();
-  
+  const [api, setApi] = useState<CarouselApi>();
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    const intervalId = setInterval(() => {
+      api.scrollNext();
+    }, 4000);
+
+    return () => clearInterval(intervalId);
+  }, [api]);
+
   const project = projects.find(p => p.id === projectId);
-  
+
   if (!project) {
     return <Navigate to="/gallery" replace />;
   }
@@ -30,7 +52,7 @@ const ProjectDetailPage = () => {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent" />
-          
+
           <div className="absolute inset-0 flex items-end">
             <div className="container-custom pb-12">
               <motion.div
@@ -38,22 +60,22 @@ const ProjectDetailPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <Link 
-                  to="/gallery" 
+                <Link
+                  to="/gallery"
                   className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground mb-6 transition-colors"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   Back to Gallery
                 </Link>
-                
+
                 <span className="inline-block bg-accent text-accent-foreground px-4 py-1.5 rounded-full text-sm font-medium mb-4">
                   {project.category}
                 </span>
-                
+
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground mb-6">
                   {project.title}
                 </h1>
-                
+
                 <div className="flex flex-wrap items-center gap-6 text-primary-foreground/90">
                   <div className="flex items-center gap-2">
                     <MapPin className="w-5 h-5" />
@@ -140,17 +162,15 @@ const ProjectDetailPage = () => {
               {project.gallery.map((image, index) => (
                 <motion.div
                   key={index}
-                  className={`rounded-2xl overflow-hidden shadow-custom-md ${
-                    index === 0 ? 'md:col-span-2 md:row-span-2' : ''
-                  }`}
+                  className={`rounded-2xl overflow-hidden shadow-custom-md ${index === 0 ? 'md:col-span-2 md:row-span-2' : ''
+                    }`}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <div className={`relative overflow-hidden group ${
-                    index === 0 ? 'aspect-[4/3]' : 'aspect-square'
-                  }`}>
+                  <div className={`relative overflow-hidden group ${index === 0 ? 'aspect-[4/3]' : 'aspect-square'
+                    }`}>
                     <img
                       src={image}
                       alt={`${project.title} - Image ${index + 1}`}
@@ -228,7 +248,7 @@ const ProjectDetailPage = () => {
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
-                        
+
                         <div className="absolute bottom-0 left-0 right-0 p-6">
                           <span className="inline-block bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-medium mb-2">
                             {relatedProject.category}

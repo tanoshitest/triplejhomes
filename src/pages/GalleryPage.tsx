@@ -54,7 +54,7 @@ const GalleryPage = () => {
                 {displayedProjects.map((project, index) => (
                   <motion.div
                     key={project.id}
-                    className={`group ${index === 0 ? 'md:col-span-2 lg:col-span-3' : ''}`}
+                    className="group"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.9 }}

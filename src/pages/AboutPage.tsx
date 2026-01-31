@@ -3,12 +3,6 @@ import PageBanner from '@/components/PageBanner';
 import About from '@/components/About';
 import AboutFounder from '@/components/AboutFounder';
 import AboutCertifications from '@/components/AboutCertifications';
-
-// ...
-
-        <About />
-        <AboutFounder />
-        <AboutCertifications />
 import AboutProcess from '@/components/AboutProcess';
 import AboutWhyChooseUs from '@/components/AboutWhyChooseUs';
 import AboutAwards from '@/components/AboutAwards';
@@ -21,6 +15,7 @@ const AboutPage = () => {
       <main>
         <PageBanner />
         <About />
+        <AboutFounder />
         <AboutCertifications />
         <AboutProcess />
         <AboutWhyChooseUs />

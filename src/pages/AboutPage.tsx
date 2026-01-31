@@ -14,7 +14,7 @@ const AboutPage = () => {
       <Header />
       <main>
         <PageBanner />
-        <About />
+        <About showButton={false} />
         <AboutFounder />
         <AboutCertifications />
         <AboutProcess />

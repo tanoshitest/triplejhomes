@@ -24,7 +24,7 @@ const features = [
   },
 ];
 
-export default function About() {
+export default function About({ showButton = true }: { showButton?: boolean }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -47,7 +47,7 @@ export default function About() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent" />
             </div>
-            
+
             {/* Experience Badge */}
             <motion.div
               className="absolute -bottom-6 -right-6 bg-accent text-accent-foreground rounded-2xl p-6 shadow-custom-xl"
@@ -76,9 +76,9 @@ export default function About() {
               {companyInfo.description}
             </p>
             <p className="text-muted-foreground mb-8">
-              From stunning kitchen renovations in Sydney's Eastern Suburbs to custom builds 
-              in Melbourne's leafy inner-east, our portfolio speaks to our commitment to 
-              excellence. We don't just build structures—we create homes that families 
+              From stunning kitchen renovations in Sydney's Eastern Suburbs to custom builds
+              in Melbourne's leafy inner-east, our portfolio speaks to our commitment to
+              excellence. We don't just build structures—we create homes that families
               love for generations.
             </p>
 
@@ -121,12 +121,14 @@ export default function About() {
             </div>
 
             {/* View More Button */}
-            <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 group">
-              <Link to="/about">
-                View More
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
+            {showButton && (
+              <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 group">
+                <Link to="/about">
+                  View More
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </Button>
+            )}
           </motion.div>
         </div>
       </div>

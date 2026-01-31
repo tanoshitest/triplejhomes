@@ -93,50 +93,7 @@ const ProjectDetailPage = () => {
           </div>
         </section>
 
-        {/* Project Description */}
-        <section className="section-padding bg-background">
-          <div className="container-custom">
-            <div className="max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="mb-12"
-              >
-                <h2 className="text-2xl font-heading font-bold text-foreground mb-4">
-                  About This Project
-                </h2>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  {project.description}
-                </p>
-              </motion.div>
 
-              {/* Project Scope */}
-              {'scope' in project && project.scope && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  className="mb-12"
-                >
-                  <h2 className="text-2xl font-heading font-bold text-foreground mb-4">
-                    Project Scope
-                  </h2>
-                  <div className="flex flex-wrap gap-3">
-                    {(project.scope as string[]).map((item, index) => (
-                      <span
-                        key={index}
-                        className="bg-secondary px-4 py-2 rounded-full text-secondary-foreground"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </motion.div>
-              )}
-            </div>
-          </div>
-        </section>
 
         {/* Full Gallery */}
         <section className="section-padding bg-secondary">

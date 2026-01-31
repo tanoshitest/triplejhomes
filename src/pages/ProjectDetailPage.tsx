@@ -124,7 +124,7 @@ const ProjectDetailPage = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <div className={`relative overflow-hidden group ${index === 0 ? 'aspect-[4/3]' : 'aspect-square'
+                  <div className={`relative overflow-hidden group ${index === 0 ? 'aspect-[16/9]' : 'aspect-square'
                     }`}>
                     <img
                       src={image}

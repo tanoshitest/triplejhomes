@@ -68,9 +68,7 @@ const ProjectDetailPage = () => {
                   Back to Gallery
                 </Link>
 
-                <span className="inline-block bg-accent text-accent-foreground px-4 py-1.5 rounded-full text-sm font-medium mb-4">
-                  {project.category}
-                </span>
+
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground mb-6">
                   {project.title}

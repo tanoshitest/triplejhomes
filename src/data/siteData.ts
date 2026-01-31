@@ -182,7 +182,7 @@ export const projects = [
     category: 'Extension & Renovation',
     description: 'Heritage-sensitive extension to a Federation home, adding modern living spaces while preserving original character features. The project seamlessly blends period details with contemporary design, featuring a stunning kitchen pavilion and alfresco entertaining area.',
     image: projectMosmanImg,
-    gallery: [projectMosmanImg, homeRenoImg, kitchenRenoImg, bathroomRenoImg, pergolaImg, laundryRenoImg, projectMosmanExtraImg],
+    gallery: [projectMosmanImg, homeRenoImg, kitchenRenoImg, bathroomRenoImg, pergolaImg, laundryRenoImg, projectMosmanImg],
     year: 2024,
     duration: '12 months',
     scope: ['Heritage restoration', 'Rear extension', 'Kitchen pavilion', 'Alfresco area', 'Pool and landscaping'],

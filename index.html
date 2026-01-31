@@ -1,40 +1,56 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Triple J Home | Expert Home Builders & Renovations in Australia</title>
-    <meta name="description" content="Triple J Home delivers expert craftsmanship in renovations, custom builds, and home extensions across Sydney and Melbourne. 25+ years of experience. Get a free quote today." />
-    <meta name="author" content="Triple J Home" />
-    <meta name="keywords" content="home builders Australia, renovations Sydney, kitchen renovations, bathroom renovations, granny flats NSW, custom home builders Melbourne" />
-    
-    <meta property="og:title" content="Triple J Home | Expert Home Builders & Renovations" />
-    <meta property="og:description" content="Building your dream home across Australia. Expert craftsmanship in renovations and custom builds." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@triplejhome" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    
-    <link rel="canonical" href="https://triplejhome.com.au" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Triple J Home | Expert Home Builders & Renovations in Australia</title>
+  <meta name="description"
+    content="Triple J Home delivers expert craftsmanship in renovations, custom builds, and home extensions across Sydney and Melbourne. 25+ years of experience. Get a free quote today." />
+  <meta name="author" content="Triple J Home" />
+  <meta name="keywords"
+    content="home builders Australia, renovations Sydney, kitchen renovations, bathroom renovations, granny flats NSW, custom home builders Melbourne" />
 
-  <body>
-    <div id="debug-error-display" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:white; color:red; z-index:9999; padding:20px; white-space:pre-wrap; font-family:monospace; overflow:auto;"></div>
-    <script>
-      window.onerror = function(msg, url, line, col, error) {
-        var div = document.getElementById('debug-error-display');
-        div.style.display = 'block';
-        div.innerHTML += 'Global Error: ' + msg + '\nURL: ' + url + '\nLine: ' + line + '\nStack: ' + (error ? error.stack : 'N/A') + '\n\n';
-      };
-      window.addEventListener('unhandledrejection', function(event) {
-        var div = document.getElementById('debug-error-display');
-        div.style.display = 'block';
-        div.innerHTML += 'Unhandled Rejection: ' + event.reason + '\n\n';
-      });
-    </script>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <meta property="og:title" content="Triple J Home | Expert Home Builders & Renovations" />
+  <meta property="og:description"
+    content="Building your dream home across Australia. Expert craftsmanship in renovations and custom builds." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@triplejhome" />
+  <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+  <link rel="canonical" href="https://triplejhome.com.au" />
+</head>
+
+<body>
+  <div id="debug-error-display"
+    style="position:fixed; top:0; left:0; width:100%; height:100%; background:white; color:black; z-index:9999; padding:20px; white-space:pre-wrap; font-family:monospace; overflow:auto;">
+    <h1>Debug Mode Active</h1>
+    <p>If you see this, HTML is loading.</p>
+    <div id="status-log">Initializing...</div>
+  </div>
+  <script>
+    var logDiv = document.getElementById('status-log');
+    function log(msg) { logDiv.innerHTML += '<div>' + msg + '</div>'; }
+
+    log('Inline script running.');
+
+    window.onerror = function (msg, url, line, col, error) {
+      var div = document.getElementById('debug-error-display');
+      div.style.color = 'red';
+      div.innerHTML += '<h3>Global Error:</h3>' + msg + '<br>URL: ' + url + '<br>Line: ' + line;
+    };
+
+    window.addEventListener('unhandledrejection', function (event) {
+      var div = document.getElementById('debug-error-display');
+      div.style.color = 'red';
+      div.innerHTML += '<h3>Unhandled Rejection:</h3>' + event.reason;
+    });
+  </script>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>

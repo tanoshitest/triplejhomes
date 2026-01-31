@@ -117,7 +117,7 @@ const ProjectDetailPage = () => {
               {project.gallery.map((image, index) => (
                 <motion.div
                   key={index}
-                  className={`rounded-2xl overflow-hidden shadow-custom-md ${index === 0 ? 'md:col-span-2 md:row-span-2' : ''
+                  className={`rounded-2xl overflow-hidden shadow-custom-md ${index === 0 ? 'md:col-span-2' : ''
                     }`}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}

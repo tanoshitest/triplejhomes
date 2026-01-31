@@ -13,7 +13,7 @@ const AboutPage = () => {
     <div className="min-h-screen">
       <Header />
       <main>
-        <About showButton={false} />
+        <About showButton={false} showSubheading={false} />
         <AboutFounder />
         <AboutCertifications />
         <AboutProcess />

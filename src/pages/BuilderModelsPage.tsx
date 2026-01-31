@@ -8,7 +8,6 @@ const BuilderModelsPage = () => {
     <div className="min-h-screen">
       <Header />
       <main>
-        <PageBanner />
         <BuilderTypesGrid />
       </main>
       <Footer />

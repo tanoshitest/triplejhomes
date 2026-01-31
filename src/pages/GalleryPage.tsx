@@ -26,7 +26,6 @@ const GalleryPage = () => {
     <div className="min-h-screen">
       <Header />
       <main>
-        <PageBanner />
         <section className="section-padding bg-background">
           <div className="container-custom">
             {/* Header */}

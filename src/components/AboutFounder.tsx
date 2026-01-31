@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Quote } from 'lucide-react';
-import { aboutTeamImage } from '@/data/siteData'; // Using same image as placeholder for now, or use a new one if available
+import founderImg from '@/assets/founder.jpg';
 
 export default function AboutFounder() {
     const ref = useRef(null);
@@ -60,9 +60,9 @@ export default function AboutFounder() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
                         <div className="relative rounded-2xl overflow-hidden shadow-custom-xl aspect-[3/4] max-w-md mx-auto">
-                            {/* Placeholder image - using a person-like image if available or generic */}
+                            {/* Founder Image */}
                             <img
-                                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                src={founderImg}
                                 alt="Founder of Triple J Homes"
                                 className="w-full h-full object-cover"
                             />

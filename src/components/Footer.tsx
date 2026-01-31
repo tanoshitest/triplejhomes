@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Facebook, Instagram, Linkedin, ArrowUp } from 'lucide-react';
+import { Facebook, Instagram, ArrowUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { companyInfo, builderTypes } from '@/data/siteData';
 
@@ -25,10 +25,24 @@ const footerLinks = {
   ],
 };
 
+const TiktokIcon = ({ className }: { className?: string }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+  </svg>
+);
+
 const socialLinks = [
   { icon: Facebook, href: companyInfo.social.facebook, label: 'Facebook' },
   { icon: Instagram, href: companyInfo.social.instagram, label: 'Instagram' },
-  { icon: Linkedin, href: companyInfo.social.linkedin, label: 'LinkedIn' },
+  { icon: TiktokIcon, href: companyInfo.social.tiktok, label: 'TikTok' },
 ];
 
 export default function Footer() {
@@ -49,7 +63,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-background/70 text-sm mb-6">
-              Building quality homes and renovations across Australia for over 25 years. 
+              Building quality homes and renovations across Australia for over 25 years.
               Licensed, insured, and committed to excellence.
             </p>
             <div className="flex gap-4">
@@ -142,7 +156,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-background/10 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-background/50 text-sm text-center md:text-left">
-            © {new Date().getFullYear()} {companyInfo.name}. All rights reserved. 
+            © {new Date().getFullYear()} {companyInfo.name}. All rights reserved.
             Built with ❤️ in Australia.
           </div>
           <div className="flex items-center gap-6">

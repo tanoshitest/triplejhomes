@@ -393,7 +393,7 @@ export const companyInfo = {
   social: {
     facebook: 'https://facebook.com/triplejhome',
     instagram: 'https://instagram.com/triplejhome',
-    linkedin: 'https://linkedin.com/company/triplejhome',
+    tiktok: 'https://tiktok.com/@triplejhome',
   },
   stats: [
     { value: '500+', label: 'Projects Completed' },

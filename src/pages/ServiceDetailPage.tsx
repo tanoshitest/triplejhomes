@@ -31,6 +31,16 @@ import homeRenoConsultationImg from '@/assets/home-reno-consultation.png';
 import homeRenoConstructionImg from '@/assets/home-reno-construction.png';
 import homeRenoCompletedImg from '@/assets/home-reno-completed.png';
 
+// Laundry Renovations specific images
+import laundryCompactImg from '@/assets/laundry-compact.png';
+import laundryStorageImg from '@/assets/laundry-storage.png';
+import laundryMudroomImg from '@/assets/laundry-mudroom.png';
+
+// Pergola specific images
+import pergolaArchitecturalImg from '@/assets/pergola-architectural.png';
+import pergolaStructuralImg from '@/assets/pergola-structural.png';
+import pergolaLifestyleImg from '@/assets/pergola-lifestyle.png';
+
 const iconMap: { [key: string]: React.ElementType } = {
   TreeDeciduous,
   Home,
@@ -158,7 +168,7 @@ const serviceDetails: {
     ],
     timeline: '1-2 weeks',
     priceRange: 'From $12,000',
-    gallery: [laundryRenoImg, bathroomRenoImg, kitchenRenoImg, homeRenoImg]
+    gallery: [laundryRenoImg, laundryCompactImg, laundryStorageImg, laundryMudroomImg]
   },
   'pergola': {
     fullDescription: 'Extend your living space with stunning pergolas, patios, and alfresco entertainment areas built to last. Our outdoor structures are engineered to withstand Australian conditions while providing beautiful spaces for year-round enjoyment.',
@@ -180,7 +190,9 @@ const serviceDetails: {
     ],
     timeline: '2-4 weeks',
     priceRange: 'From $15,000',
-    gallery: [pergolaImg, deckingImg, projectMosmanImg, homeRenoImg]
+    timeline: '2-4 weeks',
+    priceRange: 'From $15,000',
+    gallery: [pergolaImg, pergolaArchitecturalImg, pergolaStructuralImg, pergolaLifestyleImg]
   }
 };
 

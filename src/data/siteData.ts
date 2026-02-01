@@ -30,6 +30,11 @@ import builderCustomMediaGenImg from '@/assets/builder-custom-media-gen.png';
 import builderTownhouseGenImg from '@/assets/builder-townhouse-gen.png';
 import builderTownhouseLivingGenImg from '@/assets/builder-townhouse-living-gen.png';
 import builderTownhouseKitchenGenImg from '@/assets/builder-townhouse-kitchen-gen.png';
+import builderTownhouseOfficeGenImg from '@/assets/builder-townhouse-office-gen.png';
+import builderTownhousePantryGenImg from '@/assets/builder-townhouse-pantry-gen.png';
+import builderTownhouseEntertainmentGenImg from '@/assets/builder-townhouse-entertainment-gen.png';
+import builderTownhouseMeetingGenImg from '@/assets/builder-townhouse-meeting-gen.png';
+import builderTownhouseBathroomGenImg from '@/assets/builder-townhouse-bathroom-gen.png';
 import builderTownhouseImg from '@/assets/builder-townhouse.jpg';
 import builderBungalowImg from '@/assets/builder-bungalow.jpg';
 import builderSecondImg from '@/assets/builder-second.jpg';
@@ -39,6 +44,7 @@ import builderSecondModern3Img from '@/assets/builder-second-modern-3.jpg';
 import builderSecondInside1Img from '@/assets/builder-second-inside-1.jpg';
 import builderSecondInside2Img from '@/assets/builder-second-inside-2.jpg';
 import builderSecondInside3Img from '@/assets/builder-second-inside-3.jpg';
+import builderGrannyFlatGenImg from '@/assets/builder-granny-flat-gen.png';
 import builderGrannyImg from '@/assets/builder-granny.jpg';
 import floorPlanImg from '@/assets/floor-plan.jpg';
 
@@ -171,11 +177,11 @@ export const builderTypes = [
       builderTownhouseGenImg,
       builderTownhouseLivingGenImg,
       builderTownhouseKitchenGenImg,
-      builderHouseBedroomImg,
-      builderHouseBathroomImg,
-      builderHouseBackyardImg,
-      builderHouseLaundryImg,
-      builderHouseMediaImg
+      builderTownhouseOfficeGenImg,
+      builderTownhousePantryGenImg,
+      builderTownhouseEntertainmentGenImg,
+      builderTownhouseMeetingGenImg,
+      builderTownhouseBathroomGenImg
     ],
     floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
     videoId: 'dQw4w9WgXcQ',
@@ -232,12 +238,12 @@ export const builderTypes = [
     id: 'granny-flat',
     name: 'Granny Flat',
     description: 'Compliant secondary dwellings designed for comfort and independence. Our granny flats provide complete living solutions with quality finishes, perfect for extended family or rental income.',
-    image: builderGrannyImg,
+    image: builderGrannyFlatGenImg,
     specs: { beds: 1, baths: 1, cars: 0 },
     size: '40-60 sqm',
     price: 'From $120,000',
     gallery: [
-      builderGrannyImg,
+      builderGrannyFlatGenImg,
       builderHouseLivingImg,
       builderHouseKitchenImg,
       builderHouseBedroomImg,

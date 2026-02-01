@@ -45,6 +45,13 @@ import builderSecondInside1Img from '@/assets/builder-second-inside-1.jpg';
 import builderSecondInside2Img from '@/assets/builder-second-inside-2.jpg';
 import builderSecondInside3Img from '@/assets/builder-second-inside-3.jpg';
 import builderGrannyFlatGenImg from '@/assets/builder-granny-flat-gen.png';
+import builderGrannyFlatExtFullGenImg from '@/assets/builder-granny-flat-ext-full-gen.png';
+import builderGrannyFlatRoofGenImg from '@/assets/builder-granny-flat-roof-gen.png';
+import builderGrannyFlatLivingGenImg from '@/assets/builder-granny-flat-living-gen.png';
+import builderGrannyFlatBedroomGenImg from '@/assets/builder-granny-flat-bedroom-gen.png';
+import builderGrannyFlatKitchenGenImg from '@/assets/builder-granny-flat-kitchen-gen.png';
+import builderGrannyFlatBathroomGenImg from '@/assets/builder-granny-flat-bathroom-gen.png';
+import builderGrannyFlatDetailGenImg from '@/assets/builder-granny-flat-detail-gen.png';
 import builderBungalowGenImg from '@/assets/builder-bungalow-gen.png';
 import builderGrannyImg from '@/assets/builder-granny.jpg';
 import floorPlanImg from '@/assets/floor-plan.jpg';
@@ -245,13 +252,13 @@ export const builderTypes = [
     price: 'From $120,000',
     gallery: [
       builderGrannyFlatGenImg,
-      builderHouseLivingImg,
-      builderHouseKitchenImg,
-      builderHouseBedroomImg,
-      builderHouseBathroomImg,
-      builderHouseBackyardImg,
-      builderHouseLaundryImg,
-      builderHouseMediaImg
+      builderGrannyFlatExtFullGenImg,
+      builderGrannyFlatRoofGenImg,
+      builderGrannyFlatLivingGenImg,
+      builderGrannyFlatBedroomGenImg,
+      builderGrannyFlatKitchenGenImg,
+      builderGrannyFlatBathroomGenImg,
+      builderGrannyFlatDetailGenImg
     ],
     floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
     videoId: 'dQw4w9WgXcQ',

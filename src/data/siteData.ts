@@ -53,6 +53,9 @@ import builderGrannyFlatKitchenGenImg from '@/assets/builder-granny-flat-kitchen
 import builderGrannyFlatBathroomGenImg from '@/assets/builder-granny-flat-bathroom-gen.png';
 import builderGrannyFlatDetailGenImg from '@/assets/builder-granny-flat-detail-gen.png';
 import builderBungalowGenImg from '@/assets/builder-bungalow-gen.png';
+import builderBungalowLivingGenImg from '@/assets/builder-bungalow-living-gen.png';
+import builderBungalowKitchenGenImg from '@/assets/builder-bungalow-kitchen-gen.png';
+import builderBungalowBedroomGenImg from '@/assets/builder-bungalow-bedroom-gen.png';
 import builderGrannyImg from '@/assets/builder-granny.jpg';
 import floorPlanImg from '@/assets/floor-plan.jpg';
 
@@ -206,9 +209,9 @@ export const builderTypes = [
     price: 'From $380,000',
     gallery: [
       builderBungalowGenImg,
-      builderHouseLivingImg,
-      builderHouseKitchenImg,
-      builderHouseBedroomImg,
+      builderBungalowLivingGenImg,
+      builderBungalowKitchenGenImg,
+      builderBungalowBedroomGenImg,
       builderHouseBathroomImg,
       builderHouseBackyardImg,
       builderHouseLaundryImg,

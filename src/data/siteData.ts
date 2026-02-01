@@ -57,7 +57,8 @@ import blogSustainableImg from '@/assets/blog-sustainable.jpg';
 import aboutTeamImg from '@/assets/about-team.jpg';
 
 // Video
-import homesVideo from '@/assets/videos/Homes.mov';
+// import homesVideo from '@/assets/videos/Homes.mov';
+const homesVideo = ''; // Video file excluded from git due to size limits
 
 
 export const services = [
@@ -154,7 +155,6 @@ export const builderTypes = [
       builderCustomMediaGenImg
     ],
     floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
-    floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
     videoId: 'dQw4w9WgXcQ',
     videoSrc: homesVideo,
     features: ['Architect Designed', 'Premium Finishes', 'Home Automation', 'Pool Integration', 'Wine Cellar'],
@@ -177,7 +177,6 @@ export const builderTypes = [
       builderHouseLaundryImg,
       builderHouseMediaImg
     ],
-    floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
     floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
     videoId: 'dQw4w9WgXcQ',
     videoSrc: homesVideo,
@@ -202,7 +201,6 @@ export const builderTypes = [
       builderHouseMediaImg
     ],
     floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
-    floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
     videoId: 'dQw4w9WgXcQ',
     videoSrc: homesVideo,
     features: ['Wide Verandah', 'High Ceilings', 'Timber Features', 'Period Detailing', 'Energy Efficient'],
@@ -226,7 +224,6 @@ export const builderTypes = [
       builderHouseLaundryImg
     ],
     floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
-    floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
     videoId: 'dQw4w9WgXcQ',
     videoSrc: homesVideo,
     features: ['Dual Occupancy', 'Rental Ready', 'Private Entry', 'Full Kitchen', 'NBN Connected'],
@@ -249,7 +246,6 @@ export const builderTypes = [
       builderHouseLaundryImg,
       builderHouseMediaImg
     ],
-    floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
     floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
     videoId: 'dQw4w9WgXcQ',
     videoSrc: homesVideo,

@@ -114,31 +114,39 @@ const ProjectDetailPage = () => {
 
             {/* Masonry-style Gallery */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {project.gallery.map((image, index) => {
-                const isWide = index === 0 || (project.gallery.length === 7 && index === 6);
+              {(() => {
+                // Clone first image if gallery has 6 items to fill the grid
+                const displayGallery = [...project.gallery];
+                if (displayGallery.length === 6) {
+                  displayGallery.push(displayGallery[0]);
+                }
 
-                return (
-                  <motion.div
-                    key={index}
-                    className={`rounded-2xl overflow-hidden shadow-custom-md ${isWide ? 'md:col-span-2' : ''
-                      }`}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >
-                    <div className={`relative overflow-hidden group ${isWide ? 'aspect-[16/9]' : 'aspect-square'
-                      }`}>
-                      <img
-                        src={image}
-                        alt={`${project.title} - Image ${index + 1}`}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300" />
-                    </div>
-                  </motion.div>
-                )
-              })}
+                return displayGallery.map((image, index) => {
+                  const isWide = index === 0 || (displayGallery.length === 7 && index === 6);
+
+                  return (
+                    <motion.div
+                      key={index}
+                      className={`rounded-2xl overflow-hidden shadow-custom-md ${isWide ? 'md:col-span-2' : ''
+                        }`}
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                    >
+                      <div className={`relative overflow-hidden group ${isWide ? 'aspect-[16/9]' : 'aspect-square'
+                        }`}>
+                        <img
+                          src={image}
+                          alt={`${project.title} - Image ${index + 1}`}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300" />
+                      </div>
+                    </motion.div>
+                  );
+                });
+              })()}
             </div>
           </div>
         </section>

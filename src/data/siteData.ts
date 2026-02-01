@@ -8,10 +8,37 @@ import pergolaImg from '@/assets/pergola.jpg';
 
 // Builder Types
 import builderHouseImg from '@/assets/builder-house.jpg';
+import heroHomeImg from '@/assets/hero-home.jpg';
+import builderHouseScandiImg from '@/assets/builder-house-scandi-v4.png';
+import builderHouseLivingImg from '@/assets/builder-house-living.png';
+import builderHouseKitchenImg from '@/assets/builder-house-kitchen.png';
+import builderHouseBedroomImg from '@/assets/builder-house-bedroom.png';
+import builderHouseBathroomImg from '@/assets/builder-house-bathroom.png';
+import builderHouseBackyardImg from '@/assets/builder-house-backyard.png';
+import builderHouseLaundryImg from '@/assets/builder-house-laundry.png';
+import builderHouseMediaImg from '@/assets/builder-house-media.png';
 import builderCustomImg from '@/assets/builder-custom.jpg';
+import builderCustomLuxuryImg from '@/assets/builder-custom-luxury.jpg';
+import builderCustomLivingNeoImg from '@/assets/builder-custom-living-neo.png';
+import builderCustomLivingGenImg from '@/assets/builder-custom-living-gen.png';
+import builderCustomKitchenGenImg from '@/assets/builder-custom-kitchen-gen.png';
+import builderCustomBedroomGenImg from '@/assets/builder-custom-bedroom-gen.png';
+import builderCustomBathroomGenImg from '@/assets/builder-custom-bathroom-gen.png';
+import builderCustomOfficeGenImg from '@/assets/builder-custom-office-gen.png';
+import builderCustomLaundryGenImg from '@/assets/builder-custom-laundry-gen.png';
+import builderCustomMediaGenImg from '@/assets/builder-custom-media-gen.png';
+import builderTownhouseGenImg from '@/assets/builder-townhouse-gen.png';
+import builderTownhouseLivingGenImg from '@/assets/builder-townhouse-living-gen.png';
+import builderTownhouseKitchenGenImg from '@/assets/builder-townhouse-kitchen-gen.png';
 import builderTownhouseImg from '@/assets/builder-townhouse.jpg';
 import builderBungalowImg from '@/assets/builder-bungalow.jpg';
 import builderSecondImg from '@/assets/builder-second.jpg';
+import builderSecondModernImg from '@/assets/builder-second-modern.jpg';
+import builderSecondModern2Img from '@/assets/builder-second-modern-2.jpg';
+import builderSecondModern3Img from '@/assets/builder-second-modern-3.jpg';
+import builderSecondInside1Img from '@/assets/builder-second-inside-1.jpg';
+import builderSecondInside2Img from '@/assets/builder-second-inside-2.jpg';
+import builderSecondInside3Img from '@/assets/builder-second-inside-3.jpg';
 import builderGrannyImg from '@/assets/builder-granny.jpg';
 import floorPlanImg from '@/assets/floor-plan.jpg';
 
@@ -28,6 +55,10 @@ import blogSustainableImg from '@/assets/blog-sustainable.jpg';
 
 // About
 import aboutTeamImg from '@/assets/about-team.jpg';
+
+// Video
+import homesVideo from '@/assets/videos/Homes.mov';
+
 
 export const services = [
   {
@@ -85,39 +116,71 @@ export const builderTypes = [
     id: 'house',
     name: 'House',
     description: 'Our signature family homes are designed for modern Australian living. Featuring open-plan layouts, seamless indoor-outdoor flow, and premium finishes throughout. Perfect for growing families seeking quality and comfort in established suburbs.',
-    image: builderHouseImg,
+    image: heroHomeImg,
     specs: { beds: 4, baths: 2, cars: 2 },
     size: '220-280 sqm',
     price: 'From $650,000',
-    gallery: [builderHouseImg, homeRenoImg, kitchenRenoImg, bathroomRenoImg],
+    gallery: [
+      heroHomeImg,              // 1. Hero Home (Main Facade)
+      builderHouseLivingImg,    // 2. Living Room
+      builderHouseKitchenImg,   // 3. Kitchen
+      builderHouseBedroomImg,   // 4. Bedroom
+      builderHouseBathroomImg,  // 5. Bathroom
+      builderHouseBackyardImg,  // 6. Backyard / Garden
+      builderHouseLaundryImg,   // 7. Laundry Room
+      builderHouseMediaImg      // 8. Media / Entertainment Room
+    ],
     floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
     videoId: 'dQw4w9WgXcQ',
+    videoSrc: homesVideo,
     features: ['Open Plan Living', 'Alfresco Area', 'Walk-in Pantry', 'Master Ensuite', 'Double Garage'],
   },
   {
     id: 'custom-house',
     name: 'Custom House',
     description: 'Your vision, our expertise. Our custom home service delivers architect-designed residences tailored to your exact requirements. From contemporary masterpieces to coastal retreats, we bring your dream home to life.',
-    image: builderCustomImg,
+    image: builderCustomLuxuryImg,
     specs: { beds: 5, baths: 3, cars: 3 },
     size: '300-450 sqm',
     price: 'From $950,000',
-    gallery: [builderCustomImg, projectMosmanImg, projectBondiImg, kitchenRenoImg],
+    gallery: [
+      builderCustomLuxuryImg,
+      builderCustomLivingGenImg,
+      builderCustomKitchenGenImg,
+      builderCustomBedroomGenImg,
+      builderCustomBathroomGenImg,
+      builderCustomOfficeGenImg,
+      builderCustomLaundryGenImg,
+      builderCustomMediaGenImg
+    ],
+    floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
     floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
     videoId: 'dQw4w9WgXcQ',
+    videoSrc: homesVideo,
     features: ['Architect Designed', 'Premium Finishes', 'Home Automation', 'Pool Integration', 'Wine Cellar'],
   },
   {
     id: 'townhouse',
     name: 'Town House',
     description: 'Smart urban living with our contemporary townhouse designs. Three-storey layouts maximise space on compact blocks, perfect for inner-city locations where lifestyle meets convenience.',
-    image: builderTownhouseImg,
+    image: builderTownhouseGenImg,
     specs: { beds: 3, baths: 2, cars: 1 },
     size: '150-200 sqm',
     price: 'From $450,000',
-    gallery: [builderTownhouseImg, bathroomRenoImg, kitchenRenoImg, homeRenoImg],
+    gallery: [
+      builderTownhouseGenImg,
+      builderTownhouseLivingGenImg,
+      builderTownhouseKitchenGenImg,
+      builderHouseBedroomImg,
+      builderHouseBathroomImg,
+      builderHouseBackyardImg,
+      builderHouseLaundryImg,
+      builderHouseMediaImg
+    ],
+    floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
     floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
     videoId: 'dQw4w9WgXcQ',
+    videoSrc: homesVideo,
     features: ['Multi-Level Living', 'Rooftop Terrace', 'Study Nook', 'Private Courtyard', 'Secure Parking'],
   },
   {
@@ -128,22 +191,44 @@ export const builderTypes = [
     specs: { beds: 3, baths: 1, cars: 1 },
     size: '120-180 sqm',
     price: 'From $380,000',
-    gallery: [builderBungalowImg, homeRenoImg, laundryRenoImg, kitchenRenoImg],
+    gallery: [
+      builderBungalowImg,
+      builderHouseLivingImg,
+      builderHouseKitchenImg,
+      builderHouseBedroomImg,
+      builderHouseBathroomImg,
+      builderHouseBackyardImg,
+      builderHouseLaundryImg,
+      builderHouseMediaImg
+    ],
+    floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
     floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
     videoId: 'dQw4w9WgXcQ',
+    videoSrc: homesVideo,
     features: ['Wide Verandah', 'High Ceilings', 'Timber Features', 'Period Detailing', 'Energy Efficient'],
   },
   {
     id: 'second-home',
     name: 'Second Homes',
     description: 'Maximise your property\'s potential with a detached second dwelling. Ideal for rental income, multigenerational living, or a private home office. Fully self-contained with premium finishes.',
-    image: builderSecondImg,
+    image: builderSecondModern2Img,
     specs: { beds: 2, baths: 1, cars: 1 },
     size: '80-120 sqm',
     price: 'From $280,000',
-    gallery: [builderSecondImg, bathroomRenoImg, kitchenRenoImg, homeRenoImg],
+    gallery: [
+      builderSecondModern2Img,
+      builderSecondModernImg,
+      builderSecondModern3Img,
+      builderSecondInside1Img,
+      builderSecondInside2Img,
+      builderSecondInside3Img,
+      builderHouseMediaImg,
+      builderHouseLaundryImg
+    ],
+    floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
     floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
     videoId: 'dQw4w9WgXcQ',
+    videoSrc: homesVideo,
     features: ['Dual Occupancy', 'Rental Ready', 'Private Entry', 'Full Kitchen', 'NBN Connected'],
   },
   {
@@ -154,9 +239,20 @@ export const builderTypes = [
     specs: { beds: 1, baths: 1, cars: 0 },
     size: '40-60 sqm',
     price: 'From $120,000',
-    gallery: [builderGrannyImg, laundryRenoImg, bathroomRenoImg, kitchenRenoImg],
+    gallery: [
+      builderGrannyImg,
+      builderHouseLivingImg,
+      builderHouseKitchenImg,
+      builderHouseBedroomImg,
+      builderHouseBathroomImg,
+      builderHouseBackyardImg,
+      builderHouseLaundryImg,
+      builderHouseMediaImg
+    ],
+    floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
     floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
     videoId: 'dQw4w9WgXcQ',
+    videoSrc: homesVideo,
     features: ['CDC Approved', 'Compact Living', 'Quality Finishes', 'Separate Metering', 'Quick Build'],
   },
 ];

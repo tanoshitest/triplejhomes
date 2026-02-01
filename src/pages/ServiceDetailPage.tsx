@@ -16,6 +16,31 @@ import pergolaImg from '@/assets/pergola.jpg';
 import projectBondiImg from '@/assets/project-bondi.jpg';
 import projectMosmanImg from '@/assets/project-mosman.jpg';
 
+// Decking specific images
+import deckingConsultationImg from '@/assets/decking-consultation.png';
+import deckingInstallationImg from '@/assets/decking-installation.png';
+import deckingRestorationImg from '@/assets/decking-restoration.png';
+
+// Bathroom specific images
+import bathroomLuxuryImg from '@/assets/bathroom-luxury.png';
+import bathroomShowerImg from '@/assets/bathroom-shower.png';
+import bathroomCompactImg from '@/assets/bathroom-compact.png';
+
+// Home Renovations specific images
+import homeRenoConsultationImg from '@/assets/home-reno-consultation.png';
+import homeRenoConstructionImg from '@/assets/home-reno-construction.png';
+import homeRenoCompletedImg from '@/assets/home-reno-completed.png';
+
+// Laundry Renovations specific images
+import laundryCompactImg from '@/assets/laundry-compact.png';
+import laundryStorageImg from '@/assets/laundry-storage.png';
+import laundryMudroomImg from '@/assets/laundry-mudroom.png';
+
+// Pergola specific images
+import pergolaArchitecturalImg from '@/assets/pergola-architectural.png';
+import pergolaStructuralImg from '@/assets/pergola-structural.png';
+import pergolaLifestyleImg from '@/assets/pergola-lifestyle.png';
+
 const iconMap: { [key: string]: React.ElementType } = {
   TreeDeciduous,
   Home,
@@ -25,14 +50,16 @@ const iconMap: { [key: string]: React.ElementType } = {
   Fence,
 };
 
-const serviceDetails: { [key: string]: { 
-  fullDescription: string; 
-  process: string[]; 
-  benefits: string[];
-  timeline: string;
-  priceRange: string;
-  gallery: string[];
-}} = {
+const serviceDetails: {
+  [key: string]: {
+    fullDescription: string;
+    process: string[];
+    benefits: string[];
+    timeline: string;
+    priceRange: string;
+    gallery: string[];
+  }
+} = {
   'decking': {
     fullDescription: 'Transform your outdoor living with our premium hardwood and composite decking solutions designed specifically for Australian climates. Our expert team specialises in creating stunning outdoor spaces that seamlessly extend your indoor living areas, perfect for entertaining or relaxing with family.',
     process: [
@@ -53,7 +80,7 @@ const serviceDetails: { [key: string]: {
     ],
     timeline: '2-4 weeks',
     priceRange: 'From $350 per sqm',
-    gallery: [deckingImg, pergolaImg, projectBondiImg, homeRenoImg]
+    gallery: [deckingImg, deckingConsultationImg, deckingInstallationImg, deckingRestorationImg]
   },
   'home-renovations': {
     fullDescription: 'Complete home transformations from design to completion. We breathe new life into established homes across Sydney and Melbourne, handling everything from initial concept through to final handover. Our experienced project managers ensure your renovation runs smoothly while minimising disruption to your daily life.',
@@ -75,7 +102,7 @@ const serviceDetails: { [key: string]: {
     ],
     timeline: '12-24 weeks depending on scope',
     priceRange: 'From $150,000',
-    gallery: [homeRenoImg, kitchenRenoImg, bathroomRenoImg, projectMosmanImg]
+    gallery: [homeRenoImg, homeRenoConsultationImg, homeRenoConstructionImg, homeRenoCompletedImg]
   },
   'kitchen-renovations': {
     fullDescription: 'Create the heart of your home with custom cabinetry, premium benchtops, and modern appliance integration. Our kitchen renovation specialists work with you to design functional, beautiful spaces that reflect your lifestyle and add significant value to your property.',
@@ -119,7 +146,7 @@ const serviceDetails: { [key: string]: {
     ],
     timeline: '3-6 weeks',
     priceRange: 'From $25,000',
-    gallery: [bathroomRenoImg, kitchenRenoImg, laundryRenoImg, homeRenoImg]
+    gallery: [bathroomRenoImg, bathroomLuxuryImg, bathroomShowerImg, bathroomCompactImg]
   },
   'laundry-renovations': {
     fullDescription: 'Maximise functionality with clever storage solutions, quality cabinetry, and efficient layouts. A well-designed laundry makes daily tasks easier while adding value to your home. We create practical spaces that work hard without compromising on style.',
@@ -141,7 +168,7 @@ const serviceDetails: { [key: string]: {
     ],
     timeline: '1-2 weeks',
     priceRange: 'From $12,000',
-    gallery: [laundryRenoImg, bathroomRenoImg, kitchenRenoImg, homeRenoImg]
+    gallery: [laundryRenoImg, laundryCompactImg, laundryStorageImg, laundryMudroomImg]
   },
   'pergola': {
     fullDescription: 'Extend your living space with stunning pergolas, patios, and alfresco entertainment areas built to last. Our outdoor structures are engineered to withstand Australian conditions while providing beautiful spaces for year-round enjoyment.',
@@ -163,16 +190,18 @@ const serviceDetails: { [key: string]: {
     ],
     timeline: '2-4 weeks',
     priceRange: 'From $15,000',
-    gallery: [pergolaImg, deckingImg, projectMosmanImg, homeRenoImg]
+    timeline: '2-4 weeks',
+    priceRange: 'From $15,000',
+    gallery: [pergolaImg, pergolaArchitecturalImg, pergolaStructuralImg, pergolaLifestyleImg]
   }
 };
 
 const ServiceDetailPage = () => {
   const { serviceId } = useParams<{ serviceId: string }>();
-  
+
   const service = services.find(s => s.id === serviceId);
   const details = serviceId ? serviceDetails[serviceId] : null;
-  
+
   if (!service || !details) {
     return <Navigate to="/services" replace />;
   }
@@ -194,7 +223,7 @@ const ServiceDetailPage = () => {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/20" />
-          
+
           <div className="absolute inset-0 flex items-end">
             <div className="container-custom pb-12">
               <motion.div
@@ -202,14 +231,14 @@ const ServiceDetailPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <Link 
-                  to="/services" 
+                <Link
+                  to="/services"
                   className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground mb-4 transition-colors"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   Back to Services
                 </Link>
-                
+
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center">
                     {IconComponent && <IconComponent className="w-8 h-8 text-accent-foreground" />}
@@ -218,7 +247,7 @@ const ServiceDetailPage = () => {
                     {service.title}
                   </h1>
                 </div>
-                
+
                 <div className="flex flex-wrap gap-3">
                   {service.features.map((feature) => (
                     <span
@@ -329,7 +358,7 @@ const ServiceDetailPage = () => {
                   <h3 className="text-xl font-heading font-bold text-foreground mb-6">
                     Quick Info
                   </h3>
-                  
+
                   <div className="space-y-4 mb-6">
                     <div className="flex justify-between items-center pb-4 border-b border-border">
                       <span className="text-muted-foreground">Timeline</span>

@@ -251,9 +251,9 @@ export const builderTypes = [
     size: '40-60 sqm',
     price: 'From $120,000',
     gallery: [
-      builderGrannyFlatGenImg,
-      builderGrannyFlatExtFullGenImg,
       builderGrannyFlatRoofGenImg,
+      builderGrannyFlatExtFullGenImg,
+      builderGrannyFlatGenImg,
       builderGrannyFlatLivingGenImg,
       builderGrannyFlatBedroomGenImg,
       builderGrannyFlatKitchenGenImg,

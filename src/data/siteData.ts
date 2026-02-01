@@ -146,7 +146,7 @@ export const builderTypes = [
       builderHouseMediaImg      // 8. Media / Entertainment Room
     ],
     floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
-    videoId: 'dQw4w9WgXcQ',
+    videoId: '_Kkb_MYV_1w',
     videoSrc: homesVideo,
     features: ['Open Plan Living', 'Alfresco Area', 'Walk-in Pantry', 'Master Ensuite', 'Double Garage'],
   },
@@ -169,7 +169,7 @@ export const builderTypes = [
       builderCustomMediaGenImg
     ],
     floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
-    videoId: 'dQw4w9WgXcQ',
+    videoId: '_Kkb_MYV_1w',
     videoSrc: homesVideo,
     features: ['Architect Designed', 'Premium Finishes', 'Home Automation', 'Pool Integration', 'Wine Cellar'],
   },
@@ -192,7 +192,7 @@ export const builderTypes = [
       builderTownhouseBathroomGenImg
     ],
     floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
-    videoId: 'dQw4w9WgXcQ',
+    videoId: '_Kkb_MYV_1w',
     videoSrc: homesVideo,
     features: ['Multi-Level Living', 'Rooftop Terrace', 'Study Nook', 'Private Courtyard', 'Secure Parking'],
   },
@@ -215,7 +215,7 @@ export const builderTypes = [
       builderHouseMediaImg
     ],
     floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
-    videoId: 'dQw4w9WgXcQ',
+    videoId: '_Kkb_MYV_1w',
     videoSrc: homesVideo,
     features: ['Wide Verandah', 'High Ceilings', 'Timber Features', 'Period Detailing', 'Energy Efficient'],
   },
@@ -238,7 +238,7 @@ export const builderTypes = [
       builderHouseLaundryImg
     ],
     floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
-    videoId: 'dQw4w9WgXcQ',
+    videoId: '_Kkb_MYV_1w',
     videoSrc: homesVideo,
     features: ['Dual Occupancy', 'Rental Ready', 'Private Entry', 'Full Kitchen', 'NBN Connected'],
   },
@@ -261,7 +261,7 @@ export const builderTypes = [
       builderGrannyFlatDetailGenImg
     ],
     floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
-    videoId: 'dQw4w9WgXcQ',
+    videoId: '_Kkb_MYV_1w',
     videoSrc: homesVideo,
     features: ['CDC Approved', 'Compact Living', 'Quality Finishes', 'Separate Metering', 'Quick Build'],
   },

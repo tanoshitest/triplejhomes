@@ -45,6 +45,7 @@ import builderSecondInside1Img from '@/assets/builder-second-inside-1.jpg';
 import builderSecondInside2Img from '@/assets/builder-second-inside-2.jpg';
 import builderSecondInside3Img from '@/assets/builder-second-inside-3.jpg';
 import builderGrannyFlatGenImg from '@/assets/builder-granny-flat-gen.png';
+import builderBungalowGenImg from '@/assets/builder-bungalow-gen.png';
 import builderGrannyImg from '@/assets/builder-granny.jpg';
 import floorPlanImg from '@/assets/floor-plan.jpg';
 
@@ -192,12 +193,12 @@ export const builderTypes = [
     id: 'bungalow',
     name: 'Bungalow',
     description: 'Classic Australian character meets modern convenience. Our bungalow designs honour traditional aesthetics while incorporating contemporary layouts and energy-efficient features.',
-    image: builderBungalowImg,
+    image: builderBungalowGenImg,
     specs: { beds: 3, baths: 1, cars: 1 },
     size: '120-180 sqm',
     price: 'From $380,000',
     gallery: [
-      builderBungalowImg,
+      builderBungalowGenImg,
       builderHouseLivingImg,
       builderHouseKitchenImg,
       builderHouseBedroomImg,

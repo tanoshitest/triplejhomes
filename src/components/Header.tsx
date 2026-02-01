@@ -17,13 +17,19 @@ const navLinks = [
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [headerOpacity, setHeaderOpacity] = useState(1);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 50);
+
+      // Calculate opacity: 1 at top, 0 at 200px
+      const newOpacity = Math.max(0, 1 - scrollY / 200);
+      setHeaderOpacity(newOpacity);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -40,11 +46,14 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || !isHomePage
+      style={{
+        opacity: headerOpacity,
+        pointerEvents: headerOpacity <= 0 ? 'none' : 'auto'
+      }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${isScrolled || !isHomePage
           ? 'bg-card/95 backdrop-blur-md shadow-custom-lg'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <nav className="container-custom">
         <div className="flex items-center justify-between h-20">
@@ -59,9 +68,8 @@ export default function Header() {
               className="flex items-center"
             >
               <span
-                className={`font-heading font-bold text-2xl transition-colors ${
-                  isScrolled || !isHomePage ? 'text-foreground' : 'text-primary-foreground'
-                }`}
+                className={`font-heading font-bold text-2xl transition-colors ${isScrolled || !isHomePage ? 'text-foreground' : 'text-primary-foreground'
+                  }`}
               >
                 {companyInfo.name}
               </span>
@@ -79,13 +87,12 @@ export default function Header() {
               <Link
                 key={link.name}
                 to={link.href}
-                className={`font-medium text-sm transition-colors link-underline ${
-                  isActiveLink(link.href)
+                className={`font-medium text-sm transition-colors link-underline ${isActiveLink(link.href)
                     ? 'text-accent'
                     : isScrolled || !isHomePage
-                    ? 'text-foreground hover:text-accent'
-                    : 'text-primary-foreground/90 hover:text-primary-foreground'
-                }`}
+                      ? 'text-foreground hover:text-accent'
+                      : 'text-primary-foreground/90 hover:text-primary-foreground'
+                  }`}
               >
                 {link.name}
               </Link>
@@ -144,11 +151,10 @@ export default function Header() {
                   <Link
                     key={link.name}
                     to={link.href}
-                    className={`block font-medium py-2 transition-colors ${
-                      isActiveLink(link.href)
+                    className={`block font-medium py-2 transition-colors ${isActiveLink(link.href)
                         ? 'text-accent'
                         : 'text-foreground hover:text-accent'
-                    }`}
+                      }`}
                   >
                     {link.name}
                   </Link>

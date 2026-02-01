@@ -123,25 +123,24 @@ const BuilderDetailPage = () => {
                       <img
                         src={builder.gallery[activeGalleryIndex]}
                         alt={`${builder.name} gallery`}
-                        className="w-full h-[400px] object-cover"
+                        className="w-full aspect-video object-cover"
                       />
                     </div>
                     {/* Thumbnails */}
                     <div className="grid grid-cols-4 gap-4">
-                      {builder.gallery.slice(0, 4).map((img, idx) => (
+                      {builder.gallery.map((img, idx) => (
                         <button
                           key={idx}
                           onClick={() => setActiveGalleryIndex(idx)}
-                          className={`rounded-xl overflow-hidden transition-all ${
-                            idx === activeGalleryIndex
-                              ? 'ring-4 ring-accent'
-                              : 'opacity-70 hover:opacity-100'
-                          }`}
+                          className={`rounded-xl overflow-hidden transition-all ${idx === activeGalleryIndex
+                            ? 'ring-4 ring-accent'
+                            : 'opacity-70 hover:opacity-100'
+                            }`}
                         >
                           <img
                             src={img}
                             alt={`${builder.name} gallery ${idx + 1}`}
-                            className="w-full aspect-square md:aspect-auto md:h-28 object-cover"
+                            className="w-full aspect-video object-cover"
                           />
                         </button>
                       ))}
@@ -158,16 +157,27 @@ const BuilderDetailPage = () => {
                   <h2 className="text-2xl font-heading font-bold text-foreground mb-4">
                     Video Tour
                   </h2>
-                  <div className="rounded-2xl overflow-hidden aspect-video">
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      src={`https://www.youtube.com/embed/${builder.videoId}`}
-                      title={`${builder.name} Video Tour`}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="border-0"
-                    />
+                  <div className="rounded-2xl overflow-hidden aspect-video relative bg-black">
+                    {builder.videoSrc ? (
+                      <video
+                        controls
+                        className="w-full h-full object-cover"
+                        src={builder.videoSrc}
+                        poster={builder.image}
+                      >
+                        Your browser does not support the video tag.
+                      </video>
+                    ) : (
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src={`https://www.youtube.com/embed/${builder.videoId}`}
+                        title={`${builder.name} Video Tour`}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="border-0"
+                      />
+                    )}
                   </div>
                 </motion.section>
               </div>
@@ -175,59 +185,59 @@ const BuilderDetailPage = () => {
 
             {/* Sidebar */}
             <div className="lg:col-span-1">
-            <div className="sticky top-28 space-y-6">
+              <div className="sticky top-4 space-y-6">
                 <motion.div
                   className="bg-card rounded-2xl p-6 shadow-custom-lg"
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                <h3 className="text-xl font-heading font-bold text-foreground mb-4">
-                  Interested in this model?
-                </h3>
-                <p className="text-muted-foreground mb-6">
-                  Contact us today for a free consultation and quote. Our team is ready to help bring your dream home to life.
-                </p>
-                <div className="space-y-4">
-                  <Button
-                    asChild
-                    className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
-                  >
-                    <Link to="/contact">
-                      Request a Quote
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </Link>
-                  </Button>
-                  <Button variant="outline" className="w-full">
-                    Download Brochure
-                  </Button>
-                </div>
+                  <h3 className="text-xl font-heading font-bold text-foreground mb-4">
+                    Interested in this model?
+                  </h3>
+                  <p className="text-muted-foreground mb-6">
+                    Contact us today for a free consultation and quote. Our team is ready to help bring your dream home to life.
+                  </p>
+                  <div className="space-y-4">
+                    <Button
+                      asChild
+                      className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+                    >
+                      <Link to="/contact">
+                        Request a Quote
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </Link>
+                    </Button>
+                    <Button variant="outline" className="w-full">
+                      Download Brochure
+                    </Button>
+                  </div>
 
-                {/* Quick Specs */}
-                <div className="mt-8 pt-6 border-t border-border">
-                  <h4 className="font-heading font-semibold text-foreground mb-4">
-                    Quick Specs
-                  </h4>
-                  <div className="space-y-3 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Size</span>
-                      <span className="font-semibold text-foreground">{builder.size}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Bedrooms</span>
-                      <span className="font-semibold text-foreground">{builder.specs.beds}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Bathrooms</span>
-                      <span className="font-semibold text-foreground">{builder.specs.baths}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Garage</span>
-                      <span className="font-semibold text-foreground">{builder.specs.cars} Car</span>
+                  {/* Quick Specs */}
+                  <div className="mt-8 pt-6 border-t border-border">
+                    <h4 className="font-heading font-semibold text-foreground mb-4">
+                      Quick Specs
+                    </h4>
+                    <div className="space-y-3 text-sm">
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">Size</span>
+                        <span className="font-semibold text-foreground">{builder.size}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">Bedrooms</span>
+                        <span className="font-semibold text-foreground">{builder.specs.beds}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">Bathrooms</span>
+                        <span className="font-semibold text-foreground">{builder.specs.baths}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">Garage</span>
+                        <span className="font-semibold text-foreground">{builder.specs.cars} Car</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </motion.div>
+                </motion.div>
               </div>
             </div>
           </div>

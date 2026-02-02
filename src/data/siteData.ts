@@ -249,7 +249,7 @@ export const builderTypes = [
     id: 'granny-flat',
     name: 'Granny Flat',
     description: 'Compliant secondary dwellings designed for comfort and independence. Our granny flats provide complete living solutions with quality finishes, perfect for extended family or rental income.',
-    image: builderGrannyFlatGenImg,
+    image: builderGrannyFlatRoofGenImg,
     specs: { beds: 1, baths: 1, cars: 0 },
     size: '40-60 sqm',
     price: 'From $120,000',

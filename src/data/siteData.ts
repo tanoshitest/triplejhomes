@@ -56,6 +56,10 @@ import builderBungalowGenImg from '@/assets/builder-bungalow-gen.png';
 import builderBungalowLivingGenImg from '@/assets/builder-bungalow-living-gen.png';
 import builderBungalowKitchenGenImg from '@/assets/builder-bungalow-kitchen-gen.png';
 import builderBungalowBedroomGenImg from '@/assets/builder-bungalow-bedroom-gen.png';
+import builderBungalowBathroomGenImg from '@/assets/builder-bungalow-bathroom-gen.png';
+import builderBungalowBackyardGenImg from '@/assets/builder-bungalow-backyard-gen.png';
+import builderBungalowLaundryGenImg from '@/assets/builder-bungalow-laundry-gen.png';
+import builderBungalowMediaGenImg from '@/assets/builder-bungalow-media-gen.png';
 import builderGrannyImg from '@/assets/builder-granny.jpg';
 import floorPlanImg from '@/assets/floor-plan.jpg';
 
@@ -212,10 +216,10 @@ export const builderTypes = [
       builderBungalowLivingGenImg,
       builderBungalowKitchenGenImg,
       builderBungalowBedroomGenImg,
-      builderHouseBathroomImg,
-      builderHouseBackyardImg,
-      builderHouseLaundryImg,
-      builderHouseMediaImg
+      builderBungalowBathroomGenImg,
+      builderBungalowBackyardGenImg,
+      builderBungalowLaundryGenImg,
+      builderBungalowMediaGenImg
     ],
     floorPlans: [floorPlanImg, floorPlanImg, floorPlanImg],
     videoId: '_Kkb_MYV_1w',

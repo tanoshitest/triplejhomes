@@ -17,29 +17,65 @@ import projectBondiImg from '@/assets/project-bondi.jpg';
 import projectMosmanImg from '@/assets/project-mosman.jpg';
 
 // Decking specific images
-import deckingConsultationImg from '@/assets/decking-consultation.png';
-import deckingInstallationImg from '@/assets/decking-installation.png';
-import deckingRestorationImg from '@/assets/decking-restoration.png';
+// Decking specific images
+import decking1 from '@/assets/decking-1.jpg';
+import decking2 from '@/assets/decking-2.jpg';
+import decking3 from '@/assets/decking-3.jpg';
+import decking4 from '@/assets/decking-4.jpg';
+import decking5 from '@/assets/decking-5.jpg';
+import decking6 from '@/assets/decking-6.jpg';
+import decking7 from '@/assets/decking-7.jpg';
+import decking8 from '@/assets/decking-8.jpg';
 
-// Bathroom specific images
-import bathroomLuxuryImg from '@/assets/bathroom-luxury.png';
-import bathroomShowerImg from '@/assets/bathroom-shower.png';
-import bathroomCompactImg from '@/assets/bathroom-compact.png';
+// Bathroom Renovations specific images
+import bathroomRenovations1 from '@/assets/bathroom-renovations-1.jpg';
+import bathroomRenovations2 from '@/assets/bathroom-renovations-2.jpg';
+import bathroomRenovations3 from '@/assets/bathroom-renovations-3.jpg';
+import bathroomRenovations4 from '@/assets/bathroom-renovations-4.jpg';
+import bathroomRenovations5 from '@/assets/bathroom-renovations-5.jpg';
+import bathroomRenovations6 from '@/assets/bathroom-renovations-6.jpg';
+import bathroomRenovations7 from '@/assets/bathroom-renovations-7.jpg';
+import bathroomRenovations8 from '@/assets/bathroom-renovations-8.jpg';
 
 // Home Renovations specific images
-import homeRenoConsultationImg from '@/assets/home-reno-consultation.png';
-import homeRenoConstructionImg from '@/assets/home-reno-construction.png';
-import homeRenoCompletedImg from '@/assets/home-reno-completed.png';
+import homeRenovations1 from '@/assets/home-renovations-1.jpg';
+import homeRenovations2 from '@/assets/home-renovations-2.jpg';
+import homeRenovations3 from '@/assets/home-renovations-3.jpg';
+import homeRenovations4 from '@/assets/home-renovations-4.jpg';
+import homeRenovations5 from '@/assets/home-renovations-5.jpg';
+import homeRenovations6 from '@/assets/home-renovations-6.jpg';
+import homeRenovations7 from '@/assets/home-renovations-7.jpg';
+import homeRenovations8 from '@/assets/home-renovations-8.jpg';
 
 // Laundry Renovations specific images
-import laundryCompactImg from '@/assets/laundry-compact.png';
-import laundryStorageImg from '@/assets/laundry-storage.png';
-import laundryMudroomImg from '@/assets/laundry-mudroom.png';
+import laundryRenovations1 from '@/assets/laundry-renovations-1.jpg';
+import laundryRenovations2 from '@/assets/laundry-renovations-2.jpg';
+import laundryRenovations3 from '@/assets/laundry-renovations-3.jpg';
+import laundryRenovations4 from '@/assets/laundry-renovations-4.jpg';
+import laundryRenovations5 from '@/assets/laundry-renovations-5.jpg';
+import laundryRenovations6 from '@/assets/laundry-renovations-6.jpg';
+import laundryRenovations7 from '@/assets/laundry-renovations-7.jpg';
+import laundryRenovations8 from '@/assets/laundry-renovations-8.jpg';
 
-// Pergola specific images
-import pergolaArchitecturalImg from '@/assets/pergola-architectural.png';
-import pergolaStructuralImg from '@/assets/pergola-structural.png';
-import pergolaLifestyleImg from '@/assets/pergola-lifestyle.png';
+// Kitchen Renovations specific images
+import kitchenRenovations1 from '@/assets/kitchen-renovations-1.jpg';
+import kitchenRenovations2 from '@/assets/kitchen-renovations-2.jpg';
+import kitchenRenovations3 from '@/assets/kitchen-renovations-3.jpg';
+import kitchenRenovations4 from '@/assets/kitchen-renovations-4.jpg';
+import kitchenRenovations5 from '@/assets/kitchen-renovations-5.jpg';
+import kitchenRenovations6 from '@/assets/kitchen-renovations-6.jpg';
+import kitchenRenovations7 from '@/assets/kitchen-renovations-7.jpg';
+import kitchenRenovations8 from '@/assets/kitchen-renovations-8.jpg';
+
+// Pergola & Outdoor specific images
+import pergolaOutdoor1 from '@/assets/pergola-outdoor-1.jpg';
+import pergolaOutdoor2 from '@/assets/pergola-outdoor-2.jpg';
+import pergolaOutdoor3 from '@/assets/pergola-outdoor-3.jpg';
+import pergolaOutdoor4 from '@/assets/pergola-outdoor-4.jpg';
+import pergolaOutdoor5 from '@/assets/pergola-outdoor-5.jpg';
+import pergolaOutdoor6 from '@/assets/pergola-outdoor-6.jpg';
+import pergolaOutdoor7 from '@/assets/pergola-outdoor-7.jpg';
+import pergolaOutdoor8 from '@/assets/pergola-outdoor-8.jpg';
 
 const iconMap: { [key: string]: React.ElementType } = {
   TreeDeciduous,
@@ -80,7 +116,7 @@ const serviceDetails: {
     ],
     timeline: '2-4 weeks',
     priceRange: 'From $350 per sqm',
-    gallery: [deckingImg, deckingConsultationImg, deckingInstallationImg, deckingRestorationImg]
+    gallery: [decking1, decking2, decking3, decking4, decking5, decking6, decking7, decking8]
   },
   'home-renovations': {
     fullDescription: 'Complete home transformations from design to completion. We breathe new life into established homes across Sydney and Melbourne, handling everything from initial concept through to final handover. Our experienced project managers ensure your renovation runs smoothly while minimising disruption to your daily life.',
@@ -102,7 +138,7 @@ const serviceDetails: {
     ],
     timeline: '12-24 weeks depending on scope',
     priceRange: 'From $150,000',
-    gallery: [homeRenoImg, homeRenoConsultationImg, homeRenoConstructionImg, homeRenoCompletedImg]
+    gallery: [homeRenovations1, homeRenovations2, homeRenovations3, homeRenovations4, homeRenovations5, homeRenovations6, homeRenovations7, homeRenovations8]
   },
   'kitchen-renovations': {
     fullDescription: 'Create the heart of your home with custom cabinetry, premium benchtops, and modern appliance integration. Our kitchen renovation specialists work with you to design functional, beautiful spaces that reflect your lifestyle and add significant value to your property.',
@@ -124,7 +160,7 @@ const serviceDetails: {
     ],
     timeline: '4-8 weeks',
     priceRange: 'From $35,000',
-    gallery: [kitchenRenoImg, homeRenoImg, projectBondiImg, bathroomRenoImg]
+    gallery: [kitchenRenovations1, kitchenRenovations2, kitchenRenovations3, kitchenRenovations4, kitchenRenovations5, kitchenRenovations6, kitchenRenovations7, kitchenRenovations8]
   },
   'bathroom-renovations': {
     fullDescription: 'Luxury bathroom designs featuring floor-to-ceiling tiles, frameless showers, and statement fixtures. Whether you\'re looking for a spa-like retreat or a practical family bathroom, our team delivers stunning results that combine form and function perfectly.',
@@ -146,7 +182,7 @@ const serviceDetails: {
     ],
     timeline: '3-6 weeks',
     priceRange: 'From $25,000',
-    gallery: [bathroomRenoImg, bathroomLuxuryImg, bathroomShowerImg, bathroomCompactImg]
+    gallery: [bathroomRenovations1, bathroomRenovations2, bathroomRenovations3, bathroomRenovations4, bathroomRenovations5, bathroomRenovations6, bathroomRenovations7, bathroomRenovations8]
   },
   'laundry-renovations': {
     fullDescription: 'Maximise functionality with clever storage solutions, quality cabinetry, and efficient layouts. A well-designed laundry makes daily tasks easier while adding value to your home. We create practical spaces that work hard without compromising on style.',
@@ -168,7 +204,7 @@ const serviceDetails: {
     ],
     timeline: '1-2 weeks',
     priceRange: 'From $12,000',
-    gallery: [laundryRenoImg, laundryCompactImg, laundryStorageImg, laundryMudroomImg]
+    gallery: [laundryRenovations1, laundryRenovations2, laundryRenovations3, laundryRenovations4, laundryRenovations5, laundryRenovations6, laundryRenovations7, laundryRenovations8]
   },
   'pergola': {
     fullDescription: 'Extend your living space with stunning pergolas, patios, and alfresco entertainment areas built to last. Our outdoor structures are engineered to withstand Australian conditions while providing beautiful spaces for year-round enjoyment.',
@@ -190,9 +226,7 @@ const serviceDetails: {
     ],
     timeline: '2-4 weeks',
     priceRange: 'From $15,000',
-    timeline: '2-4 weeks',
-    priceRange: 'From $15,000',
-    gallery: [pergolaImg, pergolaArchitecturalImg, pergolaStructuralImg, pergolaLifestyleImg]
+    gallery: [pergolaOutdoor1, pergolaOutdoor2, pergolaOutdoor3, pergolaOutdoor4, pergolaOutdoor5, pergolaOutdoor6, pergolaOutdoor7, pergolaOutdoor8]
   }
 };
 

@@ -36,12 +36,12 @@ export default function Hero() {
           </motion.span>
 
           <motion.h1
-            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-primary-foreground mb-6 leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-primary-foreground mb-6 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <span className="whitespace-nowrap">Building Your <span className="text-accent">Dream Home</span></span>
+            <span>Building Your <span className="text-accent">Dream Home</span></span>
             <br />
             Across Australia
           </motion.h1>
